@@ -129,8 +129,21 @@ a {
   transform: translateY(-2px);
 }
 
+.hero-btn:active,
 .btn:active {
+  background: var(--accent);
   transform: scale(0.97);
+}
+
+.hero-btn:focus,
+.btn:focus {
+  outline: none;
+}
+
+.hero-btn:focus:not(:active),
+.btn:focus:not(:active) {
+  background: var(--black);
+  color: #fff;
 }
 
 /* Основные секции */
