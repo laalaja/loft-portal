@@ -63,9 +63,9 @@ a {
 .hero-card h1 {
   margin-bottom: 18px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 56px;
+  font-size: 46px;
   line-height: 1;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--black);
@@ -121,6 +121,7 @@ a {
   font-weight: 700;
   transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
   cursor: pointer;
+  letter-spacing: 0.08em;
 }
 
 .hero-btn:hover,
