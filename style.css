@@ -1,15 +1,19 @@
 :root {
   font-family: 'Inter', system-ui, Arial, sans-serif;
 
-  --bg: #F6F6F3;
-  --card-bg: #FFFFFF;
-  --action-bg: #FCFCFA;
+  --bg: #F0F0EC;
+  --card-bg: #FDFDFB;
+  --action-bg: #F1F1EC;
 
   --black: #0F0F0F;
   --accent: #6F826B;
 
-  --text-main: #555550;
+  --text-main: #3F3F3B;
   --text-muted: #6B6B66;
+
+  --link: #0F0F0F;
+  --link-hover: #6F826B;
+  --link-border: rgba(15, 15, 15, 0.20);
 
   --border-card: rgba(15, 15, 15, 0.08);
   --border-action: rgba(15, 15, 15, 0.10);
@@ -93,8 +97,17 @@ a {
 }
 
 .hero-info a {
+  color: var(--link);
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--link-border);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.hero-info a:hover {
+  color: var(--link-hover);
+  text-decoration-color: var(--link-hover);
 }
 
 .hero-actions {
@@ -113,7 +126,7 @@ a {
   padding: 13px 16px;
   border: none;
   border-radius: 24px;
-  background: var(--black);
+  background: #171512;
   color: #fff;
   text-decoration: none;
   text-align: center;
@@ -124,13 +137,23 @@ a {
   letter-spacing: 0.08em;
 }
 
-.hero-btn:hover,
-.btn:hover {
-  background: var(--accent);
+.hero-btn:hover {
+  background: #5F6B5B;
   transform: translateY(-2px);
 }
 
-.hero-btn:active,
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-action-hover);
+}
+
+.hero-btn:active {
+  background: #5F6B5B;
+  transform: scale(0.97);
+}
+
 .btn:active {
   background: var(--accent);
   transform: scale(0.97);
@@ -233,7 +256,7 @@ a {
 
 .option-card:hover {
   transform: translateY(-2px);
-  border-color: var(--black);
+  border-color: var(--link-hover);
   background: var(--card-bg);
   box-shadow: var(--shadow-action-hover);
 }
@@ -308,6 +331,26 @@ textarea {
 
 button.btn {
   width: 100%;
+  min-height: 124px;
+  padding: 22px 20px;
+  border-radius: 24px;
+  border: 1px solid var(--border-action);
+
+  background: var(--action-bg);
+  color: var(--black);
+
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0;
+
+  box-shadow: none;
+}
+
+button.btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-action-hover);
 }
 
 .note {
